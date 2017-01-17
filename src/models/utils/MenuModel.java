@@ -1,5 +1,5 @@
 package models.utils;
 
-public class MenuModel {
-
+public enum MenuModel {
+DECK_TO_WASTE, WASTE_TO_DECK, WASTE_TO_SUITE, WASTE_TO_STAIR, STAIR_TO_SUITE , STAIR_TO_STAIR, SUITE_TO_STAIR, TURN_CARD_FROM_STAIR, EXIT;
 }

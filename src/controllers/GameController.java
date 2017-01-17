@@ -1,5 +1,5 @@
 package controllers;
 
-public class GameController {
-
+public interface GameController {
+	void createGame();
 }
