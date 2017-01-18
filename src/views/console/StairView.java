@@ -10,10 +10,10 @@ public class StairView extends MainView {
 
 	private int stairNumber;
 
-	public StairView(Stack<CardEntity> stair, int tableauStackIndex) {
+	public StairView(Stack<CardEntity> stair, int stairNumber) {
 		super();
 		this.stair = stair;
-		this.stairNumber = tableauStackIndex;
+		this.stairNumber = stairNumber;
 	}
 
 	@Override
@@ -32,7 +32,6 @@ public class StairView extends MainView {
 					this.ioController.write("[");
 				}
 			}
-			this.ioController.writeNewLine("");
 		}
 
 	}

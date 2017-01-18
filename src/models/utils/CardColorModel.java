@@ -1,5 +1,5 @@
 package models.utils;
 
-public enum ColorModel {
+public enum CardColorModel {
 	RED, BLACK;
 }

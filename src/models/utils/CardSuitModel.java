@@ -2,15 +2,15 @@ package models.utils;
 
 public enum CardSuitModel {
 
-    DIAMONDS("oros", ColorModel.RED),
-    HEARTS("copas", ColorModel.RED),
-    PIKES("espadas", ColorModel.BLACK),
-    CLOVERS("bastos", ColorModel.BLACK);
+    DIAMONDS("oros", CardColorModel.RED),
+    HEARTS("copas", CardColorModel.RED),
+    PIKES("espadas", CardColorModel.BLACK),
+    CLOVERS("bastos", CardColorModel.BLACK);
 
     private String value;
-    private ColorModel color;
+    private CardColorModel color;
 
-    CardSuitModel(String value, ColorModel color) {
+    CardSuitModel(String value, CardColorModel color) {
         this.value = value;
         this.color = color;
     }

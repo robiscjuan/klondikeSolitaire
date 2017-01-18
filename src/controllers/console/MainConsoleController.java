@@ -3,9 +3,12 @@ package controllers.console;
 import controllers.GameController;
 import controllers.IOController;
 import models.entities.CardEntity;
+import models.entities.GameEntity;
 import models.utils.CardSuitModel;
 import models.utils.CardValueModel;
 import views.console.CardView;
+import views.console.DeckView;
+import views.console.GameView;
 import views.console.MenuView;
 
 public class MainConsoleController {
@@ -15,17 +18,23 @@ public class MainConsoleController {
 	}
 
 	public void run(){
-		GameController game = new GameConsoleController();
+		IOController io= new IOConsoleController();
+		
+		GameController gameController = new GameConsoleController();
+		GameEntity gameEntity = gameController.createGame();
+		GameView gameView  = new GameView(gameEntity);
+		gameView.show();
+		
 		MenuView menu  = new MenuView();
 		menu.show();
 		
-		IOController io= new IOConsoleController();
+
 		
 		String opcion = io.read();
 		
 		io.writeNewLine(opcion);
 		
-		CardView card = new CardView(new CardEntity(CardValueModel.ACE, CardSuitModel.DIAMONDS, true));
-		card.show();
+		//CardView card = new CardView(new CardEntity(CardValueModel.ACE, CardSuitModel.DIAMONDS, true));
+		//card.show();
 	};
 }

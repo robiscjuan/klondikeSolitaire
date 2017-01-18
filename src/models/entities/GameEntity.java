@@ -97,11 +97,13 @@ public class GameEntity {
 	public Stack<CardEntity> getSuit(CardSuitModel cardSuit) {
 		return suits.get(cardSuit);
 	}
-
 	public Stack<CardEntity> getStair(int stairNumber) {
 		return stairs.get(stairNumber);
 	}
 
+	public int getNumStairs(){
+		return NUM_STAIRS;
+	}
 	public StateModel getState() {
 		return state;
 	}
