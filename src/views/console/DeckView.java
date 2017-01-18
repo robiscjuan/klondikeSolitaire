@@ -22,6 +22,7 @@ public class DeckView extends MainView{
 	    	  ioController.writeNewLine("<vacío>");
 	      } else {
 	          new CardView(deck.peek()).show();
+	    	  ioController.writeNewLine("");
 	      }
 	}
 

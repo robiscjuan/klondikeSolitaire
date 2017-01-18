@@ -32,6 +32,7 @@ public class StairView extends MainView {
 					this.ioController.write("[");
 				}
 			}
+	    	  ioController.writeNewLine("");
 		}
 
 	}

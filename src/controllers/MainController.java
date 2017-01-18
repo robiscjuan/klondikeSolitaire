@@ -12,7 +12,6 @@ import views.console.GameView;
 import views.console.MenuView;
 
 public class MainController {
-	//TODO VER SI NO SERÍA MEJOR SACAR ESTO A LA RAIZ, Y QUE ELLA LLAMASE A GAME
 	public static void main (String [] args){
 		new MainController().run();
 	}

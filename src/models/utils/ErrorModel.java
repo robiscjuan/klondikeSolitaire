@@ -2,10 +2,11 @@ package models.utils;
 
 public enum ErrorModel {
 	INVALID_OPTION("La opción debe ser entre 1 y 9 inclusives"),
-	NOT_ALLOWED_MOVE("No se puede poner"),
+	NOT_ALLOWED_MOVE("Movimiento inválido"),
 	EMPTY_STACK("Pila vacía"),
 	NOT_EMPTY_DECK("La baraja no está vacía"),
-	ALREADY_TURNED_UP("Carta ya descubierta");
+	ALREADY_TURNED_UP("Carta ya descubierta"),
+	INVALID_NUM_OF_CARD("El numero de cartas seleccionado no es válido");
 
 	private String value;
 
