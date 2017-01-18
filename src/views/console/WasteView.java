@@ -1,6 +1,7 @@
 package views.console;
 
 import java.util.Stack;
+
 import models.entities.CardEntity;
 
 public class WasteView extends MainView{
