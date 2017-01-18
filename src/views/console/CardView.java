@@ -1,20 +1,21 @@
 package views.console;
 
+import models.entities.CardEntity;
 
-public class CardView {
-    private final Card card;
+public class CardView extends MainView {
 
-    private IO io = new IO();
+	private CardEntity card;
 
-    public CardView(Card card) {
-        this.card = card;
-    }
+	public CardView(CardEntity card) {
+		super();
+		this.card = card;
+	}
 
-    public void show() {
-        if (card.isFaceUp()) {
-            io.write("[" + card.getValue() + "," + card.getSuit().toString().charAt(0) + "]");
-        } else {
-            io.write("[X,X]");
-        }
-    }
+	public void show() {
+		if (card.isTurnedUp()) {
+			ioController.writeNewLine("[" + card.getValue() + "," + card.getSuit().toString().charAt(0) + "]");
+		} else {
+			ioController.writeNewLine("[X,X]");
+		}
+	}
 }

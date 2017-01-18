@@ -1,8 +1,11 @@
 package controllers;
 
 public interface IOController {
-	//TODO Bucle de lectura 
+	public abstract void writeNewLine(String string);
 	
-	//TODO Escritura ver como ponerla en las vistas
 	public abstract void write(String string);
+	
+	//TODO lectura
+	//public abstract String read();
+
 }

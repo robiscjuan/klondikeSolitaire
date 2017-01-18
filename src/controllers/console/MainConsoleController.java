@@ -2,7 +2,10 @@ package controllers.console;
 
 import controllers.GameController;
 import controllers.IOController;
+import models.entities.CardEntity;
 import models.utils.CardSuitModel;
+import models.utils.CardValueModel;
+import views.console.CardView;
 import views.console.MenuView;
 
 public class MainConsoleController {
@@ -15,5 +18,8 @@ public class MainConsoleController {
 		GameController game = new GameConsoleController();
 		MenuView menu  = new MenuView();
 		menu.show();
+		
+		CardView card = new CardView(new CardEntity(CardValueModel.ACE, CardSuitModel.DIAMONDS, true));
+		card.show();
 	};
 }

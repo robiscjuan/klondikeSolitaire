@@ -17,4 +17,5 @@ public abstract class MainView {
 		ioController = this.factory.getIOController();
 	}
 	
+	public abstract void show();
 }
