@@ -24,8 +24,11 @@ public class ErrorView extends MainView {
 	public void show() {
 		this.ioController.write(this.error.toString());
 		if ((this.cardOrigin != null) && (this.cardDestination != null)) {
-			this.ioController
-					.writeNewLine(" de " + this.cardOrigin.toString() + " sobre " + this.cardDestination.toString());
+			this.ioController.write(" de ");
+			new CardView(this.cardOrigin).show();
+			this.ioController.write(" sobre ");
+			new CardView(this.cardDestination).show();
+			this.ioController.writeNewLine("");
 		} else {
 			this.ioController.writeNewLine("");
 		}

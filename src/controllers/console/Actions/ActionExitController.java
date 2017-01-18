@@ -1,13 +1,13 @@
 package controllers.console.Actions;
 
 import models.entities.GameEntity;
+import models.utils.StateModel;
 
-public class ActionExitController extends ActionController  {
+public class ActionExitController extends ActionController {
 
 	@Override
-	public void doAction(GameEntity Game) {
-		// TODO Auto-generated method stub
-		
+	public void doAction(GameEntity game) {
+		game.setState(StateModel.EXIT);
 	}
 
 }

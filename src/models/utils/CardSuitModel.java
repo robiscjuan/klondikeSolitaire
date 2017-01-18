@@ -20,6 +20,10 @@ public enum CardSuitModel {
         return this.value == cardSuit.value;
     }
     
+    public boolean isEqualColor(CardSuitModel cardSuit) {
+        return this.color == cardSuit.color;
+    }
+    
     @Override
     public String toString() {
         return value;
