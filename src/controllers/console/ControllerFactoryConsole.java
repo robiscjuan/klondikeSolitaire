@@ -1,38 +1,22 @@
 package controllers.console;
 
-import controllers.CardController;
 import controllers.ControllerFactory;
 import controllers.ErrorController;
 import controllers.GameController;
 import controllers.IOController;
-//TODO Revisar los controller
 
-public class ControllerFactoryConsole extends ControllerFactory {
-	private CardController cardController;
+public class ControllerFactoryConsole implements ControllerFactory {
+
 	private ErrorController errorController;
+	
 	private IOController ioController;
+	
 	private GameController gameController;
-
-	/*public ControllerFactoryConsole() {
-		this.cardController = new CardController();
-		this.errorController = new ErrorController();
-		this.ioController = new IOController();
-		this.gameController = new GameConsoleController();
-	}*/
-
-	/*@Override
-	public CardController getCardController() {
-		if (cardController == null) {
-			this.cardController = new CardController();
-		}
-		return this.cardController;
-	}*/
 
 	@Override
 	public ErrorController gerErrorController() {
-//TODO revisar si error controller debería estar aquí
 		if (errorController == null) {
-			// errorController = new ErrorController();
+			this.errorController = new ErrorConsoleController();
 		}
 		return this.errorController;
 	}
@@ -52,11 +36,5 @@ public class ControllerFactoryConsole extends ControllerFactory {
 		}
 		return this.gameController;
 	}
-
-	@Override
-	public CardController getCardController() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 }

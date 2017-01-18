@@ -1,17 +1,36 @@
 package controllers.console;
 
 import controllers.GameController;
+import controllers.IOController;
 import models.entities.GameEntity;
+import models.utils.StateModel;
+import views.console.GameView;
+import views.console.MenuView;
 
-public class GameConsoleController implements GameController{
-	//TODO poner atributos los modelos de deck, stair,suite y waste
-		//TODO instanciar todo lo necesario
-	
+public class GameConsoleController implements GameController {
+
 	@Override
-	public GameEntity createGame() {
-		return new GameEntity();
-	}
-	
+	public void startGame() {
 
+		IOController ioController = new ControllerFactoryConsole().getIOController();
+
+		GameEntity gameEntity = new GameEntity();
+
+		while (gameEntity.getState() != StateModel.EXIT) {
+			GameView gameView = new GameView(gameEntity);
+			gameView.show();
+
+			MenuView menu = new MenuView();
+			menu.show();
+
+			String opcion = ioController.read();
+			ioController.writeNewLine(opcion);
+
+			gameEntity.setState(StateModel.GAMING);
+		}
+
+		ioController.writeNewLine("Gracias por jugar. Juan Robisco");
+		System.exit(0);
+	}
 
 }
