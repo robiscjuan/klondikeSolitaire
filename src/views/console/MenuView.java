@@ -18,6 +18,9 @@ public class MenuView extends MainView {
 		ioController.writeNewLine("7. Mover de palo a escalera");
 		ioController.writeNewLine("8. Voltear en escalera");
 		ioController.writeNewLine("9. Salir");
+		ioController.write("Opción? [1-9]: ");
+
+		
 	}
 
 }

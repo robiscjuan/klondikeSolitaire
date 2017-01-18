@@ -1,5 +1,6 @@
 package controllers.console;
 
+import controllers.ErrorController;
 import controllers.GameController;
 import controllers.IOController;
 import models.entities.GameEntity;
@@ -13,10 +14,13 @@ public class GameConsoleController implements GameController {
 	public void startGame() {
 
 		IOController ioController = new ControllerFactoryConsole().getIOController();
-
+		ErrorController errorController = new ControllerFactoryConsole().gerErrorController();
 		GameEntity gameEntity = new GameEntity();
 
 		while (gameEntity.getState() != StateModel.EXIT) {
+
+			gameEntity.setState(StateModel.GAMING);
+
 			GameView gameView = new GameView(gameEntity);
 			gameView.show();
 
@@ -24,12 +28,12 @@ public class GameConsoleController implements GameController {
 			menu.show();
 
 			String opcion = ioController.read();
-			ioController.writeNewLine(opcion);
-
-			gameEntity.setState(StateModel.GAMING);
+			if (errorController.isValidOption(opcion)) {
+				ioController.writeNewLine(opcion);
+			}
 		}
 
-		ioController.writeNewLine("Gracias por jugar. Juan Robisco");
+		ioController.writeNewLine("Gracias por jugar. Desarrollado por Juan Robisco");
 		System.exit(0);
 	}
 

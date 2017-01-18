@@ -3,16 +3,16 @@ package controllers;
 import java.util.Stack;
 
 import models.entities.CardEntity;
-import models.utils.ErrorModel;
+
 
 public interface ErrorController {
 
-	public abstract ErrorModel validateOption();
+	public abstract Boolean isValidOption(String opcion);
 
-	public abstract ErrorModel validateAction(CardEntity cardOrigin, CardEntity cardDestination);
+	public abstract Boolean isValidAction(CardEntity cardOrigin, CardEntity cardDestination);
 
-	public abstract ErrorModel validateStack(Stack<CardEntity> stack);
+	public abstract Boolean isValidStack(Stack<CardEntity> stack);
 
-	public abstract ErrorModel validateTurnUp(CardEntity card);
+	public abstract Boolean isValidTurnUp(CardEntity card);
 
 }
