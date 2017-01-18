@@ -21,21 +21,34 @@ public class ControllerFactoryConsole extends ControllerFactory {
 
 	@Override
 	public CardController getCardController() {
+		if (cardController == null) {
+			this.cardController = new CardController();
+		}
 		return this.cardController;
 	}
 
 	@Override
 	public ErrorController gerErrorController() {
+//TODO revisar si error controller debería estar aquí
+		if (errorController == null) {
+			// errorController = new ErrorController();
+		}
 		return this.errorController;
 	}
 
 	@Override
 	public IOController getIOController() {
+		if (ioController == null) {
+			this.ioController = new IOController();
+		}
 		return this.ioController;
 	}
 
 	@Override
 	public GameController getGameController() {
+		if (gameController == null) {
+			this.gameController = new GameConsoleController();
+		}
 		return this.gameController;
 	}
 

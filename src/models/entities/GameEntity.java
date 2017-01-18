@@ -1,5 +1,5 @@
 package models.entities;
 
-public class Deck {
+public class GameEntity {
 
 }

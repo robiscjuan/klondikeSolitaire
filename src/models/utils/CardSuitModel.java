@@ -1,5 +1,5 @@
 package models.utils;
 
-public enum SuitModel {
+public enum CardSuitModel {
 HEARTS, DIAMONDS, CLOVERS, PIKES;
 }

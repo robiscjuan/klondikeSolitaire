@@ -1,5 +1,5 @@
 package controllers;
 
-public class CardController {
+public interface CardController {
 
 }
