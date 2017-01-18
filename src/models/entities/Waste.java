@@ -1,8 +1,6 @@
-package models;
+package models.entities;
 
 import java.util.Stack;
-
-import models.entities.CardEntity;
 
 public class Waste {
 	private Stack<CardEntity> waste;

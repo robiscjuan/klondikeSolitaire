@@ -6,6 +6,5 @@ public class MainConsoleController {
 	}
 
 	public void run(){
-		
 	};
 }

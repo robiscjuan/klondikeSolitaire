@@ -16,7 +16,7 @@ public class ControllerFactoryConsole extends ControllerFactory {
 		this.cardController = new CardController();
 		this.errorController = new ErrorController();
 		this.ioController = new IOController();
-		this.gameController = new GameController();
+		this.gameController = new GameConsoleController();
 	}
 
 	@Override

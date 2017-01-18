@@ -1,6 +1,6 @@
-package models;
+package models.entities;
 
-import models.entities.CardEntity;
+import models.CardStack;
 
 public class Stair extends CardStack{
 

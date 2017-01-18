@@ -1,5 +1,13 @@
 package controllers.console;
 
-public class GameConsoleController {
+import controllers.GameController;
+
+public class GameConsoleController implements GameController{
+
+	@Override
+	public void createGame() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
