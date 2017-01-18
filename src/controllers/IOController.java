@@ -5,7 +5,6 @@ public interface IOController {
 	
 	public abstract void write(String string);
 	
-	//TODO lectura
-	//public abstract String read();
+	public abstract String read();
 
 }

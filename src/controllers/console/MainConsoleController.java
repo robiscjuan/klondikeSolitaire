@@ -19,6 +19,12 @@ public class MainConsoleController {
 		MenuView menu  = new MenuView();
 		menu.show();
 		
+		IOController io= new IOConsoleController();
+		
+		String opcion = io.read();
+		
+		io.writeNewLine(opcion);
+		
 		CardView card = new CardView(new CardEntity(CardValueModel.ACE, CardSuitModel.DIAMONDS, true));
 		card.show();
 	};
