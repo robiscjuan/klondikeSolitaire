@@ -15,5 +15,4 @@ public abstract class CardStack {
 	public abstract CardEntity getCard();
 	
 	public abstract void setCard();
-	
 }

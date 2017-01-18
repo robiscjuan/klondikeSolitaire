@@ -5,6 +5,7 @@ import controllers.ControllerFactory;
 import controllers.ErrorController;
 import controllers.GameController;
 import controllers.IOController;
+//TODO Revisar los controller
 
 public class ControllerFactoryConsole extends ControllerFactory {
 	private CardController cardController;
@@ -12,20 +13,20 @@ public class ControllerFactoryConsole extends ControllerFactory {
 	private IOController ioController;
 	private GameController gameController;
 
-	public ControllerFactoryConsole() {
+	/*public ControllerFactoryConsole() {
 		this.cardController = new CardController();
 		this.errorController = new ErrorController();
 		this.ioController = new IOController();
 		this.gameController = new GameConsoleController();
-	}
+	}*/
 
-	@Override
+	/*@Override
 	public CardController getCardController() {
 		if (cardController == null) {
 			this.cardController = new CardController();
 		}
 		return this.cardController;
-	}
+	}*/
 
 	@Override
 	public ErrorController gerErrorController() {
@@ -39,7 +40,7 @@ public class ControllerFactoryConsole extends ControllerFactory {
 	@Override
 	public IOController getIOController() {
 		if (ioController == null) {
-			this.ioController = new IOController();
+			this.ioController = new IOConsoleController();
 		}
 		return this.ioController;
 	}
@@ -50,6 +51,12 @@ public class ControllerFactoryConsole extends ControllerFactory {
 			this.gameController = new GameConsoleController();
 		}
 		return this.gameController;
+	}
+
+	@Override
+	public CardController getCardController() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

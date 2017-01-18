@@ -1,18 +1,25 @@
 package models.entities;
 
 import models.utils.CardSuitModel;
+import models.utils.CardValueModel;
 
 public class CardEntity {
-	private int number;
 	private CardSuitModel suit;
-	private CardValue
-	private boolean visible;
+	private CardValueModel value;
+	private boolean visibility;
 
-	public CardEntity(int number, CardSuitModel suit, Boolean visible) {
-		this.number = number;
+	public CardEntity(CardValueModel value, CardSuitModel suit, Boolean visibility) {
+		this.value = value;
 		this.suit = suit;
-		this.visible = visible;
+		this.visibility = visibility;
 	}
 	
+	public void turnUp(){
+		this.visibility = true;
+	}
 	
+	public void turnDown(){
+		this.visibility = false;
+	}
+
 }

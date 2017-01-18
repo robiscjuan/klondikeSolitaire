@@ -1,10 +1,8 @@
 package controllers;
 
-public class IOController {
+public interface IOController {
 	//TODO Bucle de lectura 
 	
 	//TODO Escritura ver como ponerla en las vistas
-	public void write(String string){
-		System.out.println(string);
-	}
+	public abstract void write(String string);
 }

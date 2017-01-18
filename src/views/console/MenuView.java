@@ -1,16 +1,11 @@
 package views.console;
 
-import controllers.IOController;
-
 public class MenuView extends MainView{
-	private IOController ioController;
 	
-	
-	@Override
-	protected void updateControllers() {
-		ioController = this.factory.getIOController();
+	public MenuView(){
+	 super();
 	}
-	
+
 	 public void show() {
 	        ioController.write("---------------------------");
 	        ioController.write("1. Mover de baraja a descarte");

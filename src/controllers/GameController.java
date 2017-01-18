@@ -1,5 +1,7 @@
 package controllers;
 
+import models.entities.GameEntity;
+
 public interface GameController {
-	void createGame();
+	GameEntity createGame();
 }

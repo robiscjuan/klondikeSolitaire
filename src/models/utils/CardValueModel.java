@@ -20,4 +20,9 @@ public enum CardValueModel {
     CardValueModel(String value) {
         this.value = value;
     }
+    
+    @Override
+    public String toString() {
+        return value;
+    }
 }
